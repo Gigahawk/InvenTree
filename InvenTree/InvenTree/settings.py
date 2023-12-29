@@ -247,6 +247,7 @@ INSTALLED_APPS = [
     'rest_framework',                       # DRF (Django Rest Framework)
     'corsheaders',                          # Cross-origin Resource Sharing for DRF
     'crispy_forms',                         # Improved form rendering
+    'crispy_bootstrap4',                    # https://stackoverflow.com/a/75501325
     'import_export',                        # Import / export tables to file
     'django_cleanup.apps.CleanupConfig',    # Automatically delete orphaned MEDIA files
     'mptt',                                 # Modified Preorder Tree Traversal
