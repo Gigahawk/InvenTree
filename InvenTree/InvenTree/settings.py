@@ -169,7 +169,12 @@ STATICFILES_DIRS = []
 # Translated Template settings
 STATICFILES_I18_PREFIX = 'i18n'
 STATICFILES_I18_SRC = BASE_DIR.joinpath('templates', 'js', 'translated')
-STATICFILES_I18_TRG = BASE_DIR.joinpath('InvenTree', 'static_i18n')
+STATICFILES_I18_TRG = get_setting(
+    'INVENTREE_STATIC_I18_ROOT',
+    config_key='static_i18_root',
+    default_value=BASE_DIR.joinpath('InvenTree', 'static_i18n'),
+    typecast=Path,
+)
 STATICFILES_DIRS.append(STATICFILES_I18_TRG)
 STATICFILES_I18_TRG = STATICFILES_I18_TRG.joinpath(STATICFILES_I18_PREFIX)
 
